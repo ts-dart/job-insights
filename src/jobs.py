@@ -8,8 +8,6 @@ def read(path):
 
     with open(path) as file:
         data = csv.DictReader(file)
-
-        for index in data:
-            lines.append(index)
+        lines = [index for index in data]
 
     return lines
