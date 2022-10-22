@@ -11,6 +11,4 @@ def test_counter():
 
 def counter_fake_mock(path, word):
     with open(path, mode="r") as file:
-        data = file.read()
-        count = data.lower().count(word.lower())
-        return count
+        return file.read().lower().count(word.lower())
